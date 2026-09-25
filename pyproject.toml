@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "westquant"
+version = "0.1.0a1"
+description = "WestQuant Open — Search the representation, not just the parameters"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+authors = [{name = "WestQuant Open / David Vesterlund"}]
+keywords = ["quantum", "compilation", "representation", "search", "optimization"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: Apache License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "westquant-core>=0.2.0a1",
+]
+
+[project.optional-dependencies]
+qiskit = ["westquant-qiskit>=0.1.0a3"]
+pytket = ["westquant-pytket>=0.1.0a1"]
+pennylane = ["westquant-pennylane>=0.1.0a1"]
+pulser = ["westquant-pulser>=0.1.0a1"]
+orchestrator = ["westquant-orchestrator>=0.1.0a1"]
+bridges = ["westquant-bridges>=0.1.0a1"]
+all = [
+    "westquant-qiskit>=0.1.0a3",
+    "westquant-pytket>=0.1.0a1",
+    "westquant-pennylane>=0.1.0a1",
+    "westquant-pulser>=0.1.0a1",
+    "westquant-orchestrator>=0.1.0a1",
+]
+test = ["pytest>=8"]
+
+[project.scripts]
+westquant = "westquant.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/WestQuantOpen"
+Source = "https://github.com/WestQuantOpen/westquant"
+Documentation = "https://github.com/WestQuantOpen/westquant#readme"
+
+[tool.setuptools.packages.find]
+where = ["src"]
