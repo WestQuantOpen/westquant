@@ -4,7 +4,7 @@ import pytest
 
 def test_import():
     import westquant
-    assert westquant.__version__ == "0.1.0a1"
+    assert westquant.__version__ == "0.1.0a2"
 
 
 def test_cli_import():

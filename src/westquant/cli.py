@@ -5,6 +5,7 @@ Commands:
     westquant compare     # Compare default vs WestQuant search on a circuit
     westquant plugins     # List available plugins
     westquant version     # Show version info
+    westquant generate    # Generate ML training data from a circuit
 """
 from __future__ import annotations
 
@@ -120,10 +121,11 @@ def cmd_plugins(args: argparse.Namespace) -> int:
 
 def cmd_version(args: argparse.Namespace) -> int:
     """Show version info."""
-    print("WestQuant Open 0.1.0a1")
+    print("WestQuant Open 0.1.0a2")
     print("  Schema: wqt-policy-v0.1")
     print("  WQIR: v0.2")
     print("  RepGraph: v0.2")
+    print("  WQDF: wqdf-v0.1")
 
     core_ok, core_ver = _check_import("westquant_core")
     if core_ok:
@@ -255,6 +257,72 @@ def _compare_pulser(circuit_path: str, args: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_generate(args: argparse.Namespace) -> int:
+    """Generate ML training data from a circuit."""
+    from .generate import generate_training_data
+
+    circuit_path = args.circuit_file
+    framework = args.framework
+    backend = args.backend
+    samples = args.samples
+    output = args.output
+    fmt = args.format
+
+    print()
+    print("  WestQuant ML Data Generation")
+    print(f"  Circuit: {circuit_path}")
+    print(f"  Framework: {framework}")
+    print(f"  Backend: {backend}")
+    print(f"  Max samples: {samples}")
+    print(f"  Output: {output} ({fmt})")
+    print()
+
+    # Load circuit
+    try:
+        if framework == "qiskit":
+            from qiskit import QuantumCircuit
+            if circuit_path.endswith(".qasm"):
+                qc = QuantumCircuit.from_qasm_file(circuit_path)
+            else:
+                print(f"  Unsupported circuit format. Use .qasm files.")
+                return 1
+        else:
+            print(f"  Framework {framework} circuit loading not yet supported in CLI.")
+            return 1
+    except ImportError:
+        print(f"  {framework} not installed. Install with: pip install westquant[{framework}]")
+        return 1
+    except Exception as e:
+        print(f"  Error loading circuit: {e}")
+        return 1
+
+    print(f"  Qubits: {qc.num_qubits}")
+    print()
+
+    # Generate
+    dataset = generate_training_data(
+        qc,
+        framework=framework,
+        backend=backend,
+        samples=samples,
+        output_format=fmt,
+        output_path=output,
+    )
+
+    print(f"  Generated {len(dataset)} samples")
+    if output:
+        print(f"  Written to: {output}")
+
+    # Show a few samples
+    for s in dataset[:3]:
+        print(f"    {s.sample_id}: depth={s.depth} 2q={s.two_qubit_gates} rep={s.representation}")
+    if len(dataset) > 3:
+        print(f"    ... ({len(dataset) - 3} more)")
+
+    print()
+    return 0
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         prog="westquant",
@@ -271,6 +339,14 @@ def main() -> None:
     compare_parser.add_argument("-f", "--framework", default="qiskit", choices=["qiskit", "pytket", "pennylane", "pulser"])
     compare_parser.add_argument("-o", "--optimization-level", type=int, default=2, help="Qiskit optimization level for baseline")
 
+    generate_parser = subparsers.add_parser("generate", help="Generate ML training data from a circuit")
+    generate_parser.add_argument("circuit_file", help="Path to circuit file (.qasm)")
+    generate_parser.add_argument("-f", "--framework", default="qiskit", choices=["qiskit", "pytket", "pennylane", "pulser"])
+    generate_parser.add_argument("-b", "--backend", default="aer", help="Target backend")
+    generate_parser.add_argument("-n", "--samples", type=int, default=100, help="Maximum number of samples")
+    generate_parser.add_argument("-o", "--output", default="dataset.jsonl", help="Output path")
+    generate_parser.add_argument("--format", default="jsonl", choices=["jsonl", "csv", "parquet"], help="Output format")
+
     args = parser.parse_args()
 
     if args.command == "doctor":
@@ -281,6 +357,8 @@ def main() -> None:
         sys.exit(cmd_version(args))
     elif args.command == "compare":
         sys.exit(cmd_compare(args))
+    elif args.command == "generate":
+        sys.exit(cmd_generate(args))
 
 
 if __name__ == "__main__":
