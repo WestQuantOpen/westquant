@@ -1,0 +1,1327 @@
+[
+  {
+    "circuit_id": "886f8fe101de",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 4,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 4,
+      "size": 4,
+      "two_qubit_gates": 3
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "5aaadcba185e",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 4,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 4,
+      "size": 4,
+      "two_qubit_gates": 3
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "93263c27b548",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 4,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 4,
+      "size": 4,
+      "two_qubit_gates": 3
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "96e6a85530ab",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 4,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 4,
+      "size": 4,
+      "two_qubit_gates": 3
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "697744be087c",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 4,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 4,
+      "size": 4,
+      "two_qubit_gates": 3
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "00edab609345",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 6,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 6,
+      "size": 6,
+      "two_qubit_gates": 5
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "d1ec01abb5ad",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 6,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 6,
+      "size": 6,
+      "two_qubit_gates": 5
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "1bfed11532da",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 6,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 6,
+      "size": 6,
+      "two_qubit_gates": 5
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "574d3a689e4e",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 6,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 6,
+      "size": 6,
+      "two_qubit_gates": 5
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "5cfd6f9aee2f",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 6,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 6,
+      "size": 6,
+      "two_qubit_gates": 5
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "2ecde72fa6c8",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 8,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 8,
+      "size": 8,
+      "two_qubit_gates": 7
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "3a5dcb9b2c06",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 8,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 8,
+      "size": 8,
+      "two_qubit_gates": 7
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "ff12558514dd",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 8,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 8,
+      "size": 8,
+      "two_qubit_gates": 7
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "19ce73293da3",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 8,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 8,
+      "size": 8,
+      "two_qubit_gates": 7
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "a09c20b31e9e",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 8,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 8,
+      "size": 8,
+      "two_qubit_gates": 7
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "293bc8eabf67",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 10,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 10,
+      "size": 10,
+      "two_qubit_gates": 9
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "6746b690e17b",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 10,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 10,
+      "size": 10,
+      "two_qubit_gates": 9
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "fb24461fd952",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 10,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 10,
+      "size": 10,
+      "two_qubit_gates": 9
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "0a9b5c95e266",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 10,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 10,
+      "size": 10,
+      "two_qubit_gates": 9
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "bd788a1fdb21",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 10,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 10,
+      "size": 10,
+      "two_qubit_gates": 9
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "86791af54c61",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 12,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 12,
+      "size": 12,
+      "two_qubit_gates": 11
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "4b93cf90dbcd",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 12,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 12,
+      "size": 12,
+      "two_qubit_gates": 11
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "8fd5d60e2a21",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 12,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 12,
+      "size": 12,
+      "two_qubit_gates": 11
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "9045d4ed2b33",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 12,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 12,
+      "size": 12,
+      "two_qubit_gates": 11
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "8c7630d80120",
+    "family": "ghz",
+    "algorithm": "ghz_state_preparation",
+    "n_qubits": 12,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 12,
+      "size": 12,
+      "two_qubit_gates": 11
+    },
+    "metadata": {
+      "description": "GHZ state preparation"
+    }
+  },
+  {
+    "circuit_id": "649afa194521",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 4,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 26,
+      "size": 40,
+      "two_qubit_gates": 18
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "d4525549aa03",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 4,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 26,
+      "size": 40,
+      "two_qubit_gates": 18
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "26a2499f55ad",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 4,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 26,
+      "size": 40,
+      "two_qubit_gates": 18
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "6a15903c58a8",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 4,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 26,
+      "size": 40,
+      "two_qubit_gates": 18
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "58c223fd8e36",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 4,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 26,
+      "size": 40,
+      "two_qubit_gates": 18
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "655ed59fccbe",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 6,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 42,
+      "size": 90,
+      "two_qubit_gates": 39
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "a5e728cb122f",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 6,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 42,
+      "size": 90,
+      "two_qubit_gates": 39
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "c71b205c4cbc",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 6,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 42,
+      "size": 90,
+      "two_qubit_gates": 39
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "d692e37b634e",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 6,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 42,
+      "size": 90,
+      "two_qubit_gates": 39
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "522daae9b65d",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 6,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 42,
+      "size": 90,
+      "two_qubit_gates": 39
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "6bf953b0e892",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 8,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 58,
+      "size": 160,
+      "two_qubit_gates": 68
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "71c3abbf5545",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 8,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 58,
+      "size": 160,
+      "two_qubit_gates": 68
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "0ebcb730ae20",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 8,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 58,
+      "size": 160,
+      "two_qubit_gates": 68
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "8f068b46d1f8",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 8,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 58,
+      "size": 160,
+      "two_qubit_gates": 68
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "34d657a7577d",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 8,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 58,
+      "size": 160,
+      "two_qubit_gates": 68
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "ce8623839a48",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 10,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 74,
+      "size": 250,
+      "two_qubit_gates": 105
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "dd33188b053b",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 10,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 74,
+      "size": 250,
+      "two_qubit_gates": 105
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "496d8c65efcb",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 10,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 74,
+      "size": 250,
+      "two_qubit_gates": 105
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "15dbf63f220b",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 10,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 74,
+      "size": 250,
+      "two_qubit_gates": 105
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "66bffa82ca94",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 10,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 74,
+      "size": 250,
+      "two_qubit_gates": 105
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "9b0f319a591a",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 12,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 90,
+      "size": 360,
+      "two_qubit_gates": 150
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "8c0231b11778",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 12,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 90,
+      "size": 360,
+      "two_qubit_gates": 150
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "70a33ad9ccd8",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 12,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 90,
+      "size": 360,
+      "two_qubit_gates": 150
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "e154519f2cfe",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 12,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 90,
+      "size": 360,
+      "two_qubit_gates": 150
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "47edefedbb85",
+    "family": "qft",
+    "algorithm": "quantum_fourier_transform",
+    "n_qubits": 12,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 90,
+      "size": 360,
+      "two_qubit_gates": 150
+    },
+    "metadata": {
+      "description": "QFT using QFTGate",
+      "swaps": true
+    }
+  },
+  {
+    "circuit_id": "67e297c71339",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 4,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 61,
+      "size": 94,
+      "two_qubit_gates": 28
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "9c67e22486c9",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 4,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 119,
+      "size": 184,
+      "two_qubit_gates": 56
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "ade988bc1bbe",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 4,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 177,
+      "size": 274,
+      "two_qubit_gates": 84
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 3
+    }
+  },
+  {
+    "circuit_id": "c5abf1f6857e",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 4,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 61,
+      "size": 94,
+      "two_qubit_gates": 28
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "b10e6e5fd409",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 4,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 4,
+      "depth": 119,
+      "size": 184,
+      "two_qubit_gates": 56
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "66cb53f93a36",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 6,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 301,
+      "size": 462,
+      "two_qubit_gates": 166
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "d97e294f9a49",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 6,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 601,
+      "size": 918,
+      "two_qubit_gates": 332
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "529e10444aad",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 6,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 901,
+      "size": 1374,
+      "two_qubit_gates": 498
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 3
+    }
+  },
+  {
+    "circuit_id": "5ee2c5c218d9",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 6,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 301,
+      "size": 462,
+      "two_qubit_gates": 166
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "b7301386acbd",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 6,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 6,
+      "depth": 601,
+      "size": 918,
+      "two_qubit_gates": 332
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "3fb329a39a45",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 8,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 758,
+      "size": 1136,
+      "two_qubit_gates": 438
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "51cf41a529f7",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 8,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 1502,
+      "size": 2264,
+      "two_qubit_gates": 876
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "094f82af3958",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 8,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 2246,
+      "size": 3392,
+      "two_qubit_gates": 1314
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 3
+    }
+  },
+  {
+    "circuit_id": "dd2a7b3f1dd6",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 8,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 758,
+      "size": 1136,
+      "two_qubit_gates": 438
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "f3e92680d87a",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 8,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 8,
+      "depth": 1502,
+      "size": 2264,
+      "two_qubit_gates": 876
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "50ac72f3064d",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 10,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 1622,
+      "size": 2334,
+      "two_qubit_gates": 886
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "4e18b567257d",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 10,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 3222,
+      "size": 4658,
+      "two_qubit_gates": 1772
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "bf6e37a083b7",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 10,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 4822,
+      "size": 6982,
+      "two_qubit_gates": 2658
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 3
+    }
+  },
+  {
+    "circuit_id": "7f1d2086ff13",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 10,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 1622,
+      "size": 2334,
+      "two_qubit_gates": 886
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "148de9a0cb8e",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 10,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 10,
+      "depth": 3222,
+      "size": 4658,
+      "two_qubit_gates": 1772
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "35c186447ef4",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 12,
+    "instance_id": 0,
+    "seed": 42,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 2809,
+      "size": 3852,
+      "two_qubit_gates": 1462
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "82d8a05ea943",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 12,
+    "instance_id": 1,
+    "seed": 43,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 5591,
+      "size": 7692,
+      "two_qubit_gates": 2924
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  },
+  {
+    "circuit_id": "2f4a38776dc6",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 12,
+    "instance_id": 2,
+    "seed": 44,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 8373,
+      "size": 11532,
+      "two_qubit_gates": 4386
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 3
+    }
+  },
+  {
+    "circuit_id": "4929603d120b",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 12,
+    "instance_id": 3,
+    "seed": 45,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 2809,
+      "size": 3852,
+      "two_qubit_gates": 1462
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 1
+    }
+  },
+  {
+    "circuit_id": "dc74e0804ca7",
+    "family": "grover",
+    "algorithm": "grovers_algorithm",
+    "n_qubits": 12,
+    "instance_id": 4,
+    "seed": 46,
+    "metrics": {
+      "n_qubits": 12,
+      "depth": 5591,
+      "size": 7692,
+      "two_qubit_gates": 2924
+    },
+    "metadata": {
+      "description": "Grover's algorithm",
+      "iterations": 2
+    }
+  }
+]

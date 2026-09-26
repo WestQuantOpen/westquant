@@ -1,0 +1,53 @@
+# Experiment 11: Quantum Framework Compilation Benchmark
+# Qiskit vs PennyLane vs Cirq — same circuits, same targets, different frameworks
+
+experiment_id: "11_framework_shootout"
+name: "Quantum Framework Compilation Benchmark"
+description: >
+  Compile the same circuits through different quantum frameworks
+  (Qiskit, PennyLane, Cirq) and compare the resulting circuit metrics.
+  This can become a recurring publication: Quantum Framework Compilation Benchmark.
+
+families:
+  - ghz
+  - qft
+  - grover
+
+sizes: [4, 6, 8, 10, 12]
+
+instances_per_size: 5
+
+frameworks:
+  - name: qiskit
+    version: "2.5+"
+    package: "westquant-qiskit"
+  - name: pennylane
+    version: "0.35+"
+    package: "westquant-pennylane"
+  - name: cirq
+    version: "1.4+"
+    package: "westquant-bridges"
+
+compilation:
+  optimization_levels: [0, 1, 2, 3]
+  target_basis: ["cx", "rz", "sx", "x"]
+
+metrics:
+  - depth
+  - two_qubit_gates
+  - size
+  - compile_time
+  - target_compliance
+  - semantic_equivalence
+
+reporting:
+  - "paired: same circuit through each framework"
+  - "median + bootstrap 95% CI"
+  - "per-family and per-size breakdown"
+
+output:
+  format: ["json", "csv", "md", "png"]
+  path: "benchmarks/results/exp11/"
+
+primary_metric: "depth"
+secondary_metric: "two_qubit_gates"

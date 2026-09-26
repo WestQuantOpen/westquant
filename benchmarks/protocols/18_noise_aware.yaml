@@ -1,0 +1,64 @@
+# Experiment 18: Noise/Hardware-Aware Optimization
+# Optimize against noise model instead of just gate count
+
+experiment_id: "18_noise_aware"
+name: "Noise and Hardware-Aware Optimization"
+description: >
+  Compile circuits for different hardware targets using BackendV2 and
+  compute noise-aware metrics (estimated fidelity, total duration,
+  noise-aware depth). The same circuit compiled for different hardware
+  produces different fidelity estimates.
+
+families:
+  - ghz
+  - qft
+  - grover
+
+sizes: [4, 6, 8]
+
+instances_per_size: 3
+
+backends:
+  - name: "GenericBackendV2_6q"
+    type: "GenericBackendV2"
+    num_qubits: 6
+    noise_info: true
+  - name: "GenericBackendV2_8q"
+    type: "GenericBackendV2"
+    num_qubits: 8
+    noise_info: true
+  - name: "GenericBackendV2_10q"
+    type: "GenericBackendV2"
+    num_qubits: 10
+    noise_info: true
+
+compilation:
+  optimization_levels: [0, 1, 2, 3]
+  seed: 42
+
+noise_aware_metrics:
+  - estimated_fidelity
+  - total_duration
+  - noise_aware_depth
+
+api: "BackendV2 (Target-based, since Qiskit 0.37+)"
+
+metrics:
+  - depth
+  - two_qubit_gates
+  - size
+  - estimated_fidelity
+  - total_duration
+  - noise_aware_depth
+
+reporting:
+  - "per-backend comparison"
+  - "fidelity vs gate count trade-off"
+  - "Pareto front: fidelity vs depth"
+
+output:
+  format: ["json", "csv", "md", "png"]
+  path: "benchmarks/results/exp18/"
+
+primary_metric: "estimated_fidelity"
+secondary_metric: "two_qubit_gates"

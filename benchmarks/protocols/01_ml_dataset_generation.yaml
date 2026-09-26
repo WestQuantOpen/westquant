@@ -1,0 +1,42 @@
+# Experiment 1: ML Dataset Generation
+# Hero demo: 1 algorithm -> thousands of ML training examples
+
+experiment_id: "01_ml_dataset_generation"
+name: "Algorithm to ML Dataset"
+description: >
+  Generate ML training data automatically from quantum algorithms.
+  Each algorithm is compiled with varying configurations to produce
+  (state, action, next_state, reward) tuples for reinforcement learning.
+
+families:
+  - ghz
+  - qft
+  - grover
+
+sizes: [4, 6, 8, 10, 12]
+
+instances_per_size: 5
+
+compilation:
+  optimization_levels: [0, 1, 2, 3]
+  basis_gates_options:
+    - ["cx", "u3", "u1", "u2"]
+    - ["cx", "rz", "sx", "x"]
+    - ["ecr", "rz", "sx", "x"]
+  layout_methods: ["trivial", "dense", "sabre"]
+  routing_methods: ["sabre", "stochastic", "basic"]
+
+samples_per_circuit: 100
+
+output:
+  format: ["jsonl", "csv"]
+  schema: "wqdf-v0.1"
+  path: "benchmarks/results/exp01/"
+
+primary_metric: "samples_per_second"
+
+expected:
+  ghz_12: "~500 samples"
+  qft_12: "~500 samples"
+  grover_8: "~500 samples"
+  total: "~3,000+ samples from 13 circuits"

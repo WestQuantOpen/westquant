@@ -1,0 +1,52 @@
+# Experiment 6: Fixed vs Searched Transformation Order
+# Compare Qiskit's 4 fixed optimization levels with WestQuant's systematic search
+
+experiment_id: "06_fixed_vs_searched"
+name: "Fixed vs Searched Transformation Order"
+description: >
+  Qiskit provides 4 fixed optimization levels. WestQuant searches over
+  optimization levels, basis gates, layout methods, and routing methods
+  to find better representations. This experiment compares the two approaches.
+
+families:
+  - ghz
+  - qft
+  - grover
+
+sizes: [4, 6, 8, 10, 12]
+
+instances_per_size: 5
+
+baseline:
+  method: "qiskit_fixed_levels"
+  optimization_levels: [0, 1, 2, 3]
+  description: "Qiskit's 4 fixed optimization levels"
+
+search:
+  method: "westquant_search"
+  optimization_levels: [0, 1, 2, 3]
+  basis_gates_options:
+    - ["cx", "u3", "u1", "u2"]
+    - ["cx", "rz", "sx", "x"]
+    - ["ecr", "rz", "sx", "x"]
+  layout_methods: ["trivial", "dense", "sabre"]
+  routing_methods: ["sabre", "stochastic", "basic"]
+  samples: 200
+  description: "WestQuant systematic search over compilation configs"
+
+metrics:
+  - depth
+  - two_qubit_gates
+  - size
+  - swap_gates
+
+reporting:
+  - "relative_delta: Delta = (WQ - baseline) / baseline"
+  - "paired_experiment: same circuit through both methods"
+  - "bootstrap_ci: 95% confidence intervals"
+
+output:
+  format: ["json", "csv", "md"]
+  path: "benchmarks/results/exp06/"
+
+primary_metric: "delta_two_qubit_gates"
