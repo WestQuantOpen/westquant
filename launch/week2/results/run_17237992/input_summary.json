@@ -1,0 +1,53 @@
+{
+  "run_id": "17237992",
+  "family": "qft",
+  "sizes": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "instances": 3,
+  "samples_per_circuit": 80,
+  "total_circuits": 12,
+  "total_samples": 960,
+  "timestamp": "2026-09-26T07:37:17Z",
+  "config": {
+    "optimization_levels": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "basis_gates_options": [
+      [
+        "cx",
+        "u3",
+        "u1",
+        "u2"
+      ],
+      [
+        "cx",
+        "rz",
+        "sx",
+        "x"
+      ],
+      [
+        "ecr",
+        "rz",
+        "sx",
+        "x"
+      ]
+    ],
+    "layout_methods": [
+      "trivial",
+      "dense",
+      "sabre"
+    ],
+    "routing_methods": [
+      "sabre",
+      "stochastic",
+      "basic"
+    ]
+  }
+}

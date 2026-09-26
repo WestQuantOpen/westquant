@@ -1,0 +1,49 @@
+{
+  "run_id": "dd8aebc2",
+  "family": "grover",
+  "n_samples": 540,
+  "n_sizes": 3,
+  "sizes": [
+    4,
+    6,
+    8
+  ],
+  "results": {
+    "4": {
+      "depth": {
+        "mean": 105.2,
+        "median": 77.5,
+        "std": 126.90283090467332
+      },
+      "two_qubit_gates": {
+        "mean": 33.6,
+        "median": 28.0,
+        "std": 32.744413997576636
+      }
+    },
+    "6": {
+      "depth": {
+        "mean": 392.7,
+        "median": 340.5,
+        "std": 389.6650172883422
+      },
+      "two_qubit_gates": {
+        "mean": 199.8,
+        "median": 167.0,
+        "std": 194.55861520015853
+      }
+    },
+    "8": {
+      "depth": {
+        "mean": 953.8,
+        "median": 830.5,
+        "std": 942.2687550290048
+      },
+      "two_qubit_gates": {
+        "mean": 528,
+        "median": 440.0,
+        "std": 514.5550771047757
+      }
+    }
+  }
+}

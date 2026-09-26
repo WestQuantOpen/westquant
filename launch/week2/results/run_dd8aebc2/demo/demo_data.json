@@ -1,0 +1,15 @@
+{
+  "family": "grover",
+  "run_id": "dd8aebc2",
+  "best": {
+    "representation": "qiskit:stochastic:opt0",
+    "depth": 0,
+    "two_qubit_gates": 0
+  },
+  "worst": {
+    "representation": "qiskit:sabre:opt0",
+    "depth": 2249,
+    "two_qubit_gates": 1320
+  },
+  "total_samples": 540
+}

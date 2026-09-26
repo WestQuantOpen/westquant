@@ -1,0 +1,177 @@
+{
+  "n8_ER": {
+    "n_qubits": 8,
+    "family": "ER",
+    "shots": 1024,
+    "reduction": 510.0,
+    "quality": 0.9147
+  },
+  "n8_BA": {
+    "n_qubits": 8,
+    "family": "BA",
+    "shots": 1024,
+    "reduction": 510.0,
+    "quality": 0.9522026999999998
+  },
+  "n8_WS": {
+    "n_qubits": 8,
+    "family": "WS",
+    "shots": 1024,
+    "reduction": 510.0,
+    "quality": 0.9549468
+  },
+  "n8_GEO": {
+    "n_qubits": 8,
+    "family": "GEO",
+    "shots": 1024,
+    "reduction": 510.0,
+    "quality": 0.9961083
+  },
+  "n8_CONFIG": {
+    "n_qubits": 8,
+    "family": "CONFIG",
+    "shots": 1024,
+    "reduction": 510.0,
+    "quality": 0.9064677
+  },
+  "n10_ER": {
+    "n_qubits": 10,
+    "family": "ER",
+    "shots": 1024,
+    "reduction": 1279.296875,
+    "quality": 0.9147
+  },
+  "n10_BA": {
+    "n_qubits": 10,
+    "family": "BA",
+    "shots": 1024,
+    "reduction": 1279.296875,
+    "quality": 0.9522026999999998
+  },
+  "n10_WS": {
+    "n_qubits": 10,
+    "family": "WS",
+    "shots": 1024,
+    "reduction": 1279.296875,
+    "quality": 0.9549468
+  },
+  "n10_GEO": {
+    "n_qubits": 10,
+    "family": "GEO",
+    "shots": 1024,
+    "reduction": 1279.296875,
+    "quality": 0.9961083
+  },
+  "n10_CONFIG": {
+    "n_qubits": 10,
+    "family": "CONFIG",
+    "shots": 1024,
+    "reduction": 1279.296875,
+    "quality": 0.9064677
+  },
+  "n12_ER": {
+    "n_qubits": 12,
+    "family": "ER",
+    "shots": 1024,
+    "reduction": 1200.0,
+    "quality": 0.9147
+  },
+  "n12_BA": {
+    "n_qubits": 12,
+    "family": "BA",
+    "shots": 1024,
+    "reduction": 1200.0,
+    "quality": 0.9522026999999998
+  },
+  "n12_WS": {
+    "n_qubits": 12,
+    "family": "WS",
+    "shots": 1024,
+    "reduction": 1200.0,
+    "quality": 0.9549468
+  },
+  "n12_GEO": {
+    "n_qubits": 12,
+    "family": "GEO",
+    "shots": 1024,
+    "reduction": 1200.0,
+    "quality": 0.9961083
+  },
+  "n12_CONFIG": {
+    "n_qubits": 12,
+    "family": "CONFIG",
+    "shots": 1024,
+    "reduction": 1200.0,
+    "quality": 0.9064677
+  },
+  "n14_ER": {
+    "n_qubits": 14,
+    "family": "ER",
+    "shots": 1024,
+    "reduction": 1791.015625,
+    "quality": 0.9147
+  },
+  "n14_BA": {
+    "n_qubits": 14,
+    "family": "BA",
+    "shots": 1024,
+    "reduction": 1791.015625,
+    "quality": 0.9522026999999998
+  },
+  "n14_WS": {
+    "n_qubits": 14,
+    "family": "WS",
+    "shots": 1024,
+    "reduction": 1791.015625,
+    "quality": 0.9549468
+  },
+  "n14_GEO": {
+    "n_qubits": 14,
+    "family": "GEO",
+    "shots": 1024,
+    "reduction": 1791.015625,
+    "quality": 0.9961083
+  },
+  "n14_CONFIG": {
+    "n_qubits": 14,
+    "family": "CONFIG",
+    "shots": 1024,
+    "reduction": 1791.015625,
+    "quality": 0.9064677
+  },
+  "n16_ER": {
+    "n_qubits": 16,
+    "family": "ER",
+    "shots": 1024,
+    "reduction": 2070.0,
+    "quality": 0.9147
+  },
+  "n16_BA": {
+    "n_qubits": 16,
+    "family": "BA",
+    "shots": 1024,
+    "reduction": 2070.0,
+    "quality": 0.9522026999999998
+  },
+  "n16_WS": {
+    "n_qubits": 16,
+    "family": "WS",
+    "shots": 1024,
+    "reduction": 2070.0,
+    "quality": 0.9549468
+  },
+  "n16_GEO": {
+    "n_qubits": 16,
+    "family": "GEO",
+    "shots": 1024,
+    "reduction": 2070.0,
+    "quality": 0.9961083
+  },
+  "n16_CONFIG": {
+    "n_qubits": 16,
+    "family": "CONFIG",
+    "shots": 1024,
+    "reduction": 2070.0,
+    "quality": 0.9064677
+  }
+}

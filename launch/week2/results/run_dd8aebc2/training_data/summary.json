@@ -1,0 +1,17 @@
+{
+  "total_records": 540,
+  "schema": "wqt20-training-v0.1",
+  "family": "grover",
+  "sizes": [
+    4,
+    6,
+    8
+  ],
+  "fields": [
+    "state",
+    "action",
+    "next_state",
+    "reward"
+  ],
+  "reward_definition": "negative delta = improvement (lower is better)"
+}

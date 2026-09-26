@@ -1,0 +1,15 @@
+{
+  "family": "qft",
+  "run_id": "17237992",
+  "best": {
+    "representation": "qiskit:stochastic:opt0",
+    "depth": 0,
+    "two_qubit_gates": 0
+  },
+  "worst": {
+    "representation": "qiskit:sabre:opt0",
+    "depth": 74,
+    "two_qubit_gates": 105
+  },
+  "total_samples": 960
+}

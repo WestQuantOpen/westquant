@@ -1,0 +1,61 @@
+{
+  "run_id": "17237992",
+  "timestamp": "2026-09-26T07:37:17Z",
+  "family": "qft",
+  "sizes": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "instances": 3,
+  "samples_per_circuit": 80,
+  "total_circuits": 12,
+  "total_samples": 960,
+  "generation_time_s": 1.5190389156341553,
+  "outputs": {
+    "github_demo": {
+      "worker": "github_demo",
+      "output": "/tmp/wq-launch/results/run_17237992/demo",
+      "files": [
+        "README.md",
+        "demo_data.json"
+      ]
+    },
+    "blog_post": {
+      "worker": "blog_post",
+      "output": "/tmp/wq-launch/results/run_17237992/blog",
+      "files": [
+        "blog_post.md"
+      ]
+    },
+    "training_data": {
+      "worker": "training_data",
+      "output": "/tmp/wq-launch/results/run_17237992/training_data",
+      "files": [
+        "training_data.jsonl",
+        "summary.json",
+        "wqdf_samples.jsonl"
+      ],
+      "records": 960
+    },
+    "paper_data": {
+      "worker": "paper_data",
+      "output": "/tmp/wq-launch/results/run_17237992/paper",
+      "files": [
+        "metrics.json",
+        "tables.tex",
+        "paper_figure.png"
+      ]
+    },
+    "benchmark_results": {
+      "worker": "benchmark_results",
+      "output": "/tmp/wq-launch/results/run_17237992/benchmark",
+      "files": [
+        "results.json",
+        "summary.md",
+        "figure.png"
+      ]
+    }
+  }
+}

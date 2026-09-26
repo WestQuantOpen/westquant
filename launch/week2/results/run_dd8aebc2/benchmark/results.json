@@ -1,0 +1,71 @@
+{
+  "run_id": "dd8aebc2",
+  "family": "grover",
+  "timestamp": "2026-09-26T07:37:29Z",
+  "total_samples": 540,
+  "by_size": {
+    "4": {
+      "count": 180,
+      "depth": {
+        "min": 0,
+        "max": 549,
+        "median": 77.5,
+        "mean": 105.2
+      },
+      "two_qubit_gates": {
+        "min": 0,
+        "max": 84,
+        "median": 28.0,
+        "mean": 33.6
+      },
+      "size": {
+        "min": 0,
+        "max": 1034,
+        "median": 107.0,
+        "mean": 161.1
+      }
+    },
+    "6": {
+      "count": 180,
+      "depth": {
+        "min": 0,
+        "max": 1202,
+        "median": 340.5,
+        "mean": 392.7
+      },
+      "two_qubit_gates": {
+        "min": 0,
+        "max": 504,
+        "median": 167.0,
+        "mean": 199.8
+      },
+      "size": {
+        "min": 0,
+        "max": 2184,
+        "median": 480.0,
+        "mean": 581.2
+      }
+    },
+    "8": {
+      "count": 180,
+      "depth": {
+        "min": 0,
+        "max": 2851,
+        "median": 830.5,
+        "mean": 953.8
+      },
+      "two_qubit_gates": {
+        "min": 0,
+        "max": 1320,
+        "median": 440.0,
+        "mean": 528
+      },
+      "size": {
+        "min": 0,
+        "max": 4786,
+        "median": 1177.0,
+        "mean": 1415.2
+      }
+    }
+  }
+}

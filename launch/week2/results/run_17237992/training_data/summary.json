@@ -1,0 +1,18 @@
+{
+  "total_records": 960,
+  "schema": "wqt20-training-v0.1",
+  "family": "qft",
+  "sizes": [
+    4,
+    6,
+    8,
+    10
+  ],
+  "fields": [
+    "state",
+    "action",
+    "next_state",
+    "reward"
+  ],
+  "reward_definition": "negative delta = improvement (lower is better)"
+}

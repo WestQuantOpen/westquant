@@ -1,0 +1,60 @@
+{
+  "run_id": "dd8aebc2",
+  "timestamp": "2026-09-26T07:37:29Z",
+  "family": "grover",
+  "sizes": [
+    4,
+    6,
+    8
+  ],
+  "instances": 3,
+  "samples_per_circuit": 60,
+  "total_circuits": 9,
+  "total_samples": 540,
+  "generation_time_s": 1.6210010051727295,
+  "outputs": {
+    "github_demo": {
+      "worker": "github_demo",
+      "output": "/tmp/wq-launch/results/run_dd8aebc2/demo",
+      "files": [
+        "README.md",
+        "demo_data.json"
+      ]
+    },
+    "blog_post": {
+      "worker": "blog_post",
+      "output": "/tmp/wq-launch/results/run_dd8aebc2/blog",
+      "files": [
+        "blog_post.md"
+      ]
+    },
+    "benchmark_results": {
+      "worker": "benchmark_results",
+      "output": "/tmp/wq-launch/results/run_dd8aebc2/benchmark",
+      "files": [
+        "results.json",
+        "summary.md",
+        "figure.png"
+      ]
+    },
+    "paper_data": {
+      "worker": "paper_data",
+      "output": "/tmp/wq-launch/results/run_dd8aebc2/paper",
+      "files": [
+        "metrics.json",
+        "tables.tex",
+        "paper_figure.png"
+      ]
+    },
+    "training_data": {
+      "worker": "training_data",
+      "output": "/tmp/wq-launch/results/run_dd8aebc2/training_data",
+      "files": [
+        "training_data.jsonl",
+        "summary.json",
+        "wqdf_samples.jsonl"
+      ],
+      "records": 540
+    }
+  }
+}
