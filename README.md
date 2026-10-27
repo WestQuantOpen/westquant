@@ -30,11 +30,15 @@ pip install westquant[qiskit]
 ```
 
 ```python
-from westquant import optimize
+from westquant_qiskit.search import DeterministicSearchEngine
 
-result = optimize(circuit, framework="qiskit", backend=backend, budget=64)
-print(result.pareto_front)
+result = DeterministicSearchEngine().search(circuit, challenge_id="demo", backend=backend, max_candidates=64)
+print(result.best.metrics, result.best.verification.equivalence)
+print([c.metrics for c in result.pareto_front])
 ```
+
+The umbrella package itself exports the WQDF dataset helpers
+(`from westquant import generate_training_data, WQDFSample`).
 
 Or from the command line:
 
@@ -88,18 +92,23 @@ pip install westquant[all]
 westquant compare circuit.qasm -f qiskit
 ```
 
-Output:
+Actual output for a 5-qubit QFT (westquant 0.1.1, Qiskit 2.6.1, no target):
 ```
-                      2Q gates   depth    verified
-Qiskit default         143       212       yes
-Qiskit opt-3           128       195       yes
-WestQuant search       113       179       yes
+                          2Q gates       depth  verification
+  ────────────────────  ──────────  ──────────  ────────────
+  Qiskit opt-2 (base)           26          29         exact
+  Qiskit opt-3                  26          29         exact
+  WestQuant search              26          34         exact
 
-Candidates evaluated: 64
-Verification: EXACT
-2Q gate reduction: 20.9%
-Depth reduction: 15.6%
+  Candidates evaluated: 8 (8 verified exact)
+  Verification of selected candidate: exact
 ```
+
+The verification column is the status returned by `QiskitEquivalenceVerifier`
+for that exact circuit: `exact`, `invalid` or `unknown`. Circuits with
+measurements, resets or more than 8 qubits are reported as `unknown`, and
+reductions are then not printed. Only `-f qiskit` is implemented; other
+frameworks exit with status 2.
 
 ## Architecture
 
@@ -118,9 +127,9 @@ WestQuant Open
 
 ## Verification
 
-Every transformation is independently verified:
-- **EXACT**: Unitary equivalence via `Operator.equiv()`
-- **UNKNOWN**: Conservative — never promoted to EXACT
+Every candidate carries an explicit verification status:
+- **EXACT**: Unitary equivalence via `Operator.equiv()` (small, unitary circuits)
+- **UNKNOWN**: Conservative — not checked or not checkable; never promoted to EXACT
 - **same_problem_different_dynamics**: Pulser-specific — never collapsed with EXACT
 
 ## Design philosophy
