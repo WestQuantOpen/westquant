@@ -158,3 +158,7 @@ Apache-2.0
 **David Vesterlund** — Vesterlund Ventures / WestQuant Open Source Project
 - Email: david@vesterlundventures.se
 - ORCID: [0009-0000-6455-1141](https://orcid.org/0009-0000-6455-1141)
+
+## WQBench data engine (experimental)
+
+A stricter, resumable compilation-data foundation is available in `westquant.wqbench`. It records explicit targets, failures, before/after metrics and conservative semantic verification. See [setup and scope](docs/wqbench/README.md), [implementation plan](docs/wqbench/PLAN_v0_1.md) and [legacy data-engine audit](docs/wqbench/AUDIT.md). It is not yet the full WQBench release or a new WQT model evaluation.
