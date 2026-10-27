@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "westquant"
-version = "0.1.0a2"
+version = "0.1.1"
 description = "WestQuant Open — Search the representation, not just the parameters"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -23,20 +23,20 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-qiskit = ["westquant-qiskit>=0.1.0a3"]
+qiskit = ["westquant-qiskit>=0.1.2"]
 pytket = ["westquant-pytket>=0.1.0a1"]
 pennylane = ["westquant-pennylane>=0.1.0a1"]
 pulser = ["westquant-pulser>=0.1.0a1"]
 orchestrator = ["westquant-orchestrator>=0.1.0a1"]
 bridges = ["westquant-bridges>=0.1.0a1"]
 all = [
-    "westquant-qiskit>=0.1.0a3",
+    "westquant-qiskit>=0.1.2",
     "westquant-pytket>=0.1.0a1",
     "westquant-pennylane>=0.1.0a1",
     "westquant-pulser>=0.1.0a1",
     "westquant-orchestrator>=0.1.0a1",
 ]
-test = ["pytest>=8"]
+test = ["pytest>=8", "westquant-qiskit>=0.1.2"]
 
 [project.scripts]
 westquant = "westquant.cli:main"

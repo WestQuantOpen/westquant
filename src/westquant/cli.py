@@ -27,7 +27,9 @@ def _check_import(module_name: str) -> tuple[bool, str | None]:
 def cmd_doctor(args: argparse.Namespace) -> int:
     """Check what's installed and working."""
     print()
-    print("  WestQuant Open 0.1")
+    from . import __version__
+
+    print(f"  WestQuant Open {__version__}")
     print()
     print("  Component          Status   Version")
     print("  ─────────────────  ───────  ───────────")
@@ -121,7 +123,9 @@ def cmd_plugins(args: argparse.Namespace) -> int:
 
 def cmd_version(args: argparse.Namespace) -> int:
     """Show version info."""
-    print("WestQuant Open 0.1.0a2")
+    from . import __version__
+
+    print(f"WestQuant Open {__version__}")
     print("  Schema: wqt-policy-v0.1")
     print("  WQIR: v0.2")
     print("  RepGraph: v0.2")
@@ -160,12 +164,19 @@ def cmd_compare(args: argparse.Namespace) -> int:
 
 
 def _compare_qiskit(circuit_path: str, args: argparse.Namespace) -> int:
-    """Compare Qiskit default vs WestQuant search."""
+    """Compare Qiskit default vs WestQuant search.
+
+    Every row reports the equivalence status actually returned by
+    ``QiskitEquivalenceVerifier`` (exact, invalid or unknown); nothing is
+    reported as verified without that check.
+    """
     try:
         from qiskit import QuantumCircuit
         from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+        from westquant_qiskit.search import DeterministicSearchEngine
+        from westquant_qiskit.verification import QiskitEquivalenceVerifier
     except ImportError:
-        print("  Qiskit not installed. Install with: pip install westquant[qiskit]")
+        print("  Qiskit and westquant-qiskit are required. Install with: pip install westquant[qiskit]")
         return 1
 
     # Load circuit
@@ -184,77 +195,68 @@ def _compare_qiskit(circuit_path: str, args: argparse.Namespace) -> int:
     print(f"  Gates: {qc.size()}")
     print()
 
-    # Default compilation
-    opt_level = args.optimization_level or 2
-    pm_default = generate_preset_pass_manager(optimization_level=opt_level)
-    tqc_default = pm_default.run(qc)
+    verifier = QiskitEquivalenceVerifier()
+    opt_level = 2 if args.optimization_level is None else args.optimization_level
 
-    default_2q = sum(1 for inst in tqc_default.data if len(inst.qubits) == 2)
-    default_depth = tqc_default.depth()
+    print(f"  {'':20s}  {'2Q gates':>10s}  {'depth':>10s}  {'verification':>12s}")
+    print(f"  {'─'*20}  {'─'*10}  {'─'*10}  {'─'*12}")
 
-    print(f"  {'':20s}  {'2Q gates':>10s}  {'depth':>10s}  {'verified':>10s}")
-    print(f"  {'─'*20}  {'─'*10}  {'─'*10}  {'─'*10}")
-    print(f"  {'Qiskit default':20s}  {default_2q:>10d}  {default_depth:>10d}  {'yes':>10s}")
-
-    # Try higher optimization levels
-    for level in [3]:
-        if level == opt_level:
-            continue
-        pm = generate_preset_pass_manager(optimization_level=level)
-        tqc = pm.run(qc)
+    default_2q = default_depth = None
+    for level in dict.fromkeys([opt_level, 3]):
+        tqc = generate_preset_pass_manager(optimization_level=level).run(qc)
         gates_2q = sum(1 for inst in tqc.data if len(inst.qubits) == 2)
-        depth = tqc.depth()
-        print(f"  {'Qiskit opt-' + str(level):20s}  {gates_2q:>10d}  {depth:>10d}  {'yes':>10s}")
+        status = verifier.verify(qc, tqc).equivalence.value
+        label = f"Qiskit opt-{level}" + (" (base)" if level == opt_level else "")
+        print(f"  {label:20s}  {gates_2q:>10d}  {tqc.depth():>10d}  {status:>12s}")
+        if default_2q is None:
+            default_2q, default_depth = gates_2q, tqc.depth()
 
-    # WestQuant search
     try:
-        from westquant_qiskit.search import DeterministicSearchEngine
-        engine = DeterministicSearchEngine()
-        result = engine.search(qc, challenge_id="compare", max_candidates=8)
-        best = result.best
-        if best:
-            wq_2q = best.metrics.get("two_qubit_gates", 0)
-            wq_depth = best.metrics.get("depth", 0)
-            print(f"  {'WestQuant search':20s}  {wq_2q:>10d}  {wq_depth:>10d}  {'yes':>10s}")
-            print()
-            print(f"  Candidates evaluated: {len(result.candidates)}")
-            print(f"  Verification: EXACT")
-            if wq_2q < default_2q:
-                saving = (1 - wq_2q / default_2q) * 100
-                print(f"  2Q gate reduction: {saving:.1f}%")
-            if wq_depth < default_depth:
-                saving = (1 - wq_depth / default_depth) * 100
-                print(f"  Depth reduction: {saving:.1f}%")
-        else:
-            print(f"  {'WestQuant search':20s}  {'N/A':>10s}  {'N/A':>10s}  {'N/A':>10s}")
-    except ImportError:
-        print("  WestQuant Qiskit plugin not installed.")
-        print("  Install with: pip install westquant[qiskit]")
-        return 1
+        result = DeterministicSearchEngine().search(qc, challenge_id="compare", max_candidates=8)
     except Exception as e:
         print(f"  WestQuant search error: {e}")
         return 1
+    best = result.best
+    if best is None:
+        print(f"  {'WestQuant search':20s}  {'N/A':>10s}  {'N/A':>10s}  {'N/A':>12s}")
+        print()
+        print(f"  No candidate compiled successfully out of {len(result.candidates)}.")
+        return 1
 
+    wq_2q = best.metrics.get("two_qubit_gates", 0)
+    wq_depth = best.metrics.get("depth", 0)
+    report = best.verification
+    status = report.equivalence.value if report else "unknown"
+    print(f"  {'WestQuant search':20s}  {wq_2q:>10d}  {wq_depth:>10d}  {status:>12s}")
+    print()
+    print(f"  Candidates evaluated: {len(result.candidates)} ({len(result.verified)} verified exact)")
+    print(f"  Verification of selected candidate: {status}" + (f" ({report.reason})" if report and report.reason else ""))
+    if not (report and report.verified):
+        print("  Selected candidate is not verified; reductions are not reported.")
+    else:
+        if wq_2q < default_2q:
+            print(f"  2Q gate reduction vs opt-{opt_level}: {(1 - wq_2q / default_2q) * 100:.1f}%")
+        if wq_depth < default_depth:
+            print(f"  Depth reduction vs opt-{opt_level}: {(1 - wq_depth / default_depth) * 100:.1f}%")
     print()
     return 0
 
 
+def _not_implemented(framework: str) -> int:
+    print(f"  {framework} compare is not implemented yet. Only -f qiskit is supported.", file=sys.stderr)
+    return 2
+
+
 def _compare_pytket(circuit_path: str, args: argparse.Namespace) -> int:
-    """Compare pytket default vs WestQuant search."""
-    print("  pytket compare — coming soon")
-    return 0
+    return _not_implemented("pytket")
 
 
 def _compare_pennylane(circuit_path: str, args: argparse.Namespace) -> int:
-    """Compare PennyLane default vs WestQuant search."""
-    print("  PennyLane compare — coming soon")
-    return 0
+    return _not_implemented("PennyLane")
 
 
 def _compare_pulser(circuit_path: str, args: argparse.Namespace) -> int:
-    """Compare Pulser default vs WestQuant search."""
-    print("  Pulser compare — coming soon")
-    return 0
+    return _not_implemented("Pulser")
 
 
 def cmd_generate(args: argparse.Namespace) -> int:
